@@ -1,0 +1,37 @@
+<form class="form" action="<?php /* @escapeNotVerified */ echo $block->getFormAction(); ?>" id="survey-form" method="post" data-hasrequired="* Required Fields">
+    <fieldset class="fieldset">
+        <div class="field name required">
+            <label class="label" for="firstName"><span>First Name</span></label>
+            <div class="control">
+                        <input name="firstName" id="firstName" title="First Name" value="" class="input-text" type="text" required />
+            </div>
+        </div>
+            <div class="field name">
+            <label class="label" for="lastName"><span>LastName</span></label>
+            <div class="control">
+                        <input name="lastName" id="lastName" title="Last Name" value="" class="input-text" type="text"/>
+            </div>
+        </div>
+         <div class="field name required">
+            <label class="label" for="email"><span>Email</span></label>
+            <div class="control">
+                        <input name="email" id="email" title="Email" value="" class="input-text" type="email" required/>
+            </div>
+        </div>
+         <div class="field name required">
+            <label class="label" for="lastName"><span>Content</span></label>
+            <div class="control">
+                        <textarea name="content" id="content" required rows="6"></textarea>
+            </div>
+        </div>
+            <?php echo $block->getChildHtml('form.additional.info'); ?>
+    </fieldset>
+    <div class="actions-toolbar">
+            <div class="primary">
+                    <input type="hidden" name="hideit" id="hideit" value="" />
+                    <button type="submit" title="Submit" class="action submit primary">
+                        <span>Submit</span>
+                    </button>
+            </div>
+        </div>
+</form>
